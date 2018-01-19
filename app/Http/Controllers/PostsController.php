@@ -28,6 +28,11 @@ class PostsController extends Controller
         // $post->title = request('title');
         // $post->body = request('body');
 
+        $this->validate(request(), [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+
         Post::Create([
             'title' => request('title'), 
             'body' => request('body')

@@ -8,22 +8,34 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Album example for Bootstrap</title>
+    <title>Blog Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="/css/album.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="../css/blog.css" rel="stylesheet">
   </head>
 
   <body>
 
+    <div class="container">
+      
     @include('layouts.nav')
 
-    <div class="container">
-      @yield('content')
-    </div>
+    </br>
+
+    <main role="main" class="container">
+      <div class="row">
+       
+        @yield('content')
+        
+        @include('layouts.sidebar')
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
     @include('layouts.footer')
 
     <!-- Bootstrap core JavaScript
@@ -34,5 +46,12 @@
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap.min.js"></script>
     <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
   </body>
 </html>

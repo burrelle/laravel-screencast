@@ -15,5 +15,10 @@ class Post extends Model
     $this->comments()->create(compact('body'));
   }
 
+  public function user()
+  {
+      return $this->belongsTo(User::class);
+  }
+
 
 }

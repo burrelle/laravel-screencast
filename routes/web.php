@@ -10,7 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-dd(resolve('App\Billing\Stripe'));
+
+// dd(resolve('App\Billing\Stripe'));
 
 Route::get('/tasks', 'TasksController@index');
 

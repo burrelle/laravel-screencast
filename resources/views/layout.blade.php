@@ -19,8 +19,6 @@
   </head>
 
   <body>
-
-    <div class="container">
       
     @include('layouts.nav')
 

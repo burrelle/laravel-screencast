@@ -19,7 +19,7 @@ class PostsController extends Controller
         // $posts = Post::latest()
         //     ->filter(request(['month', 'year']))
         //     ->get();
-    
+
         $posts = $posts->all();
 
         return view('posts.index', compact('posts'));
@@ -53,6 +53,8 @@ class PostsController extends Controller
         ]);
 
         // $post->save();
+
+        session()->flash('message', 'Your post has now been published');
 
         return redirect('/');
 

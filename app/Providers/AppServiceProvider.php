@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Billing\Stripe;
 use Illuminate\Support\ServiceProvider;
 use \App\Billing\Stripe;
 
